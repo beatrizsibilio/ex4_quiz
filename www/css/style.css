@@ -8,7 +8,7 @@
 
 h3{
   color: #0B7D89;
-  margin: 20px;
+  margin-top: 20px;
 }
 
 .respostas{
@@ -28,4 +28,8 @@ p{
 
 body{
   background-color: #CEF9FF;
+}
+
+p1{
+  color: white;
 }
