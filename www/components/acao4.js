@@ -1,7 +1,5 @@
-// This is a JavaScript file
-
 function alternativaCorreta(nomeControle, alternativa) {
-  window.location = "index2.html";
+  window.location = "index5.html";
 }
 
 function alternativaIncorreta(nomeControle, alternativa) {
@@ -27,6 +25,6 @@ function alternativaAcorreta(nomeControle) {
   navigator.notification.confirm("Escolha a alternativa correta:",escolha,"Alternativas", ['B','A']);
 }
 
-$(document).on("click","#responder1", function(){
-  alternativaAcorreta("#resposta1");
+$(document).on("click","#responder4", function(){
+  alternativaAcorreta("#resposta4");
 });

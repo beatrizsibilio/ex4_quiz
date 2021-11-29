@@ -1,7 +1,6 @@
-// This is a JavaScript file
-
 function alternativaCorreta(nomeControle, alternativa) {
-  window.location = "index2.html";
+  $(nomeControle).html("Você escolheu a alternativa <b>"+ alternativa+ "</b>, que está CORRETA!<br>PARABÉNS VOCÊ CONCLUIU O QUIZ!!!");
+  $(nomeControle).css("color", "green");
 }
 
 function alternativaIncorreta(nomeControle, alternativa) {
@@ -10,23 +9,23 @@ function alternativaIncorreta(nomeControle, alternativa) {
    navigator.vibrate(300);
 }
 
-function alternativaAcorreta(nomeControle) {
+function alternativaBcorreta(nomeControle) {
   var alternativa;
 
   function escolha(buttonIndex){
     if(buttonIndex == 1){
       alternativa = "B";
-      alternativaIncorreta(nomeControle, alternativa);
+      alternativaCorreta(nomeControle, alternativa);
     }
     if(buttonIndex == 2){
       alternativa = "A";
-      alternativaCorreta(nomeControle, alternativa);
+     alternativaIncorreta(nomeControle, alternativa);
     }
   }
 
   navigator.notification.confirm("Escolha a alternativa correta:",escolha,"Alternativas", ['B','A']);
 }
 
-$(document).on("click","#responder1", function(){
-  alternativaAcorreta("#resposta1");
+$(document).on("click","#responder10", function(){
+  alternativaBcorreta("#resposta10");
 });
